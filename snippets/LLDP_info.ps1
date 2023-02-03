@@ -19,7 +19,6 @@ $data = invoke-command -computername $host_names -errorAction SilentlyContinue -
     Set-ExecutionPolicy Bypass -Scope Process
     $LLDP_capture = Invoke-DiscoveryProtocolCapture
     $port_data = Get-DiscoveryProtocolData $LLDP_capture
-    #$portDescription = $port_data.PortDescription
     Return $port_data
 }
 
